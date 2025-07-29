@@ -53,6 +53,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if (!isTailscaleConnected()) {
+            AlertDialog.Builder(this)
+                .setTitle("Tailscale Not Connected")
+                .setMessage("Please connect to Tailscale to discover and control remote Raspberry Pi devices.")
+                .setPositiveButton("OK", null)
+                .show()
+        }
 
         scanStatusText = findViewById(R.id.scanStatusText)
 
@@ -157,6 +164,25 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    private fun isTailscaleConnected(): Boolean {
+        try {
+            val interfaces = NetworkInterface.getNetworkInterfaces()
+            for (intf in interfaces) {
+                for (addr in intf.inetAddresses) {
+                    if (!addr.isLoopbackAddress && addr is Inet4Address) {
+                        val ip = addr.hostAddress
+                        if (ip.startsWith("100.")) {
+                            return true
+                        }
+                    }
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return false
+    }
+
 
     private fun startMdnsScan() {
         if (checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -173,8 +199,8 @@ class MainActivity : AppCompatActivity() {
         // Manually add Tailscale devices (since mDNS won't detect them)
 
         val manualTailscaleDevices = listOf(
-            Triple("Remote RPi", "100.124.247.95", 5000),
-            Triple("rasp1", "100.68.119.55", 5001)
+            Triple("Sruhad RPi", "100.83.8.46", 5000),
+            Triple("us rasp1", "100.68.119.55", 5001)
         )
 
         manualTailscaleDevices.forEach { (name, ip, port) ->
