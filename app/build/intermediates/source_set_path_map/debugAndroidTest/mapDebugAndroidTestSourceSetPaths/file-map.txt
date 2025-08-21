@@ -1,0 +1,6 @@
+com.user.raspi.test.app-core-1.6.1-0 C:\Users\Divyam Patel\.gradle\caches\8.11.1\transforms\4381a3ffd1a17b6fe5686da8cd0ba46b\transformed\core-1.6.1\res
+com.user.raspi.test.app-tracing-1.2.0-1 C:\Users\Divyam Patel\.gradle\caches\8.11.1\transforms\95d9214465d0a5756ccd3c4607fbc6bf\transformed\tracing-1.2.0\res
+com.user.raspi.test.app-androidTest-2 C:\Users\Divyam Patel\Desktop\DivYam\Android\raspi4\app\build\generated\res\resValues\androidTest\debug
+com.user.raspi.test.app-mergeDebugAndroidTestResources-3 C:\Users\Divyam Patel\Desktop\DivYam\Android\raspi4\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.user.raspi.test.app-mergeDebugAndroidTestResources-4 C:\Users\Divyam Patel\Desktop\DivYam\Android\raspi4\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.user.raspi.test.app-debugAndroidTest-5 C:\Users\Divyam Patel\Desktop\DivYam\Android\raspi4\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

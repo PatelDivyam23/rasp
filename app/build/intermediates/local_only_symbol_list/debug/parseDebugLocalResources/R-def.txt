@@ -1,0 +1,37 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color ic_launcher_background
+color white
+drawable aapyasolutions_logo
+drawable border_background
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable list_item_device
+font texttype1
+id addDeviceButton
+id controlsCard
+id deviceItemText
+id deviceRecyclerView
+id devicesCard
+id imageView
+id info
+id scanCard
+id scanInstructions
+id scanStatusText
+id scanSubnetButton
+id startButton
+id statusText
+id stopButton
+id subnetScanList
+id textView
+id timerText
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Raspi
+style Theme.Raspi
+xml backup_rules
+xml data_extraction_rules
